@@ -1,11 +1,11 @@
 .navbar {
     width: 100%;
     height: 70px;
-    background-color: rgb(33, 48, 48);
+    background-color: #112D4E;
     color: white;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     transition: all 0.5s ease;
 
     .wrapper {
@@ -19,7 +19,7 @@
             align-items: center;
 
             .logo {
-                font-size: 30px;
+                font-size: 32px;
                 font-weight: 700;
                 text-decoration: none;
                 color: inherit;
@@ -32,13 +32,13 @@
                 margin-left: 30px;
 
                 .icon {
-                    font-size: 20px;
+                    font-size: 15px;
                     margin-right: 10px;
                 }
 
-                .span {
-                    font-size: 30px;
-                    font-weight: 700;
+                span {
+                    font-size: 15px;
+                    font-weight: 400;
                     text-decoration: none;
                 }
             }
@@ -46,30 +46,37 @@
         .right {
 
             .hamburger {
-                width: 32px;
+                width: 35px;
                 height: 25px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 margin-right: 30px;
                 cursor: pointer;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {display: none;}
 
                 span {
-                    width: 100%;
-                    height: 3px;
+                    width: 90%;
+                    height: 1px;
                     background-color: white;
                     transform-origin: left;
                     transition: all 1s ease;
+                    border: 1px solid white;
+                    border-radius: 25px;
                 }
             }
         }
     }
     
     &.active {
-        background-color: rgb(156, 0, 0);
+        background-color: #3F72AF;
         color: white;
 
         .hamburger {
+            scrollbar-width: none;
+            &::-webkit-scrollbar {display: none;}
+
             span {
 
                 &:first-child {
